@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard Panel</title> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image logo-name">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbkAAAByCAMAAAD50l/ZAAAAkFBMVEX///+uKF2oAE2pAE+rFlWtJFvUnbCsIFn58fSpCVGrGVapAFCrEFSsHVjYorXSlarpzNb37fH9+Prap7nnx9LhucezPGjz4+nu19+nAEq7WXzPjaTFc5DNiKDw3OP89vnKgJq9X3+6UXi3R3GyNWbjvsvHdpPdr7+8W33CaIikAEK0OmmzMGXHdZLiwMvIfJfchTX4AAAOyklEQVR4nO1d2WLbKhDVhmVttuUlXuJ4TxzHbvL/f3clBi0gQFghdXvLeWgbR0VIB4aZMwO2LAMDAwMDAwOD/xmmj+6AQUdEk0f3wKATnuOk/+g+GHTA3LHD3aM7YdABe9+23c2je2FwN6aObdv+4dHdMLgbJ5QxZ7uzR/fD4E70gpw4G9njR/fE4C6ksQ3wnh/dFYO7sA4Jc3Y8f3RfDO7AyC2Is5P9oztjcAeOfsmcHRkR7O/BOaiIs9Hp0d0xUEW/NuPyla736A4ZKGLnUczZgZEv/w5sApo4O1k/uksGSjj4DHO2s3h0nwwUMGOnnG37x0d3ykABPmowZwfnR/fKoBXPXpO4bKkz8uWfjnTJI872Xh7dMYMW7BvuCcA18uWfjanLJ8723x/dNQMpThz3hEy6z0f3zUCCXjMiKICuj+6cgRipJ5xyRr4U4k9wu38lYuJsFKa67/f5qrvFH8RGVDc8+vqt/eB2QeSeAPTLl9ef0Gb6i8/X1+lc+0zYi2LaxcdF973uxVEQERQINMuXkyDglpaNL/v3w+p9NWA+X+z3+/fV/gAzNT1kP7yv6BY2z8fADTK43mGyld9+fNgDLuvdZNpmUKaRN+T/ZhF4B9mtng6r7CbFwwzf81s2qiG/DiuMw6ilHzycxe4JQLN8ufVtdOP+ZrL0c0RMne4pzD/1VvDTHF8U1OndvLthuVL7cSLfFzGGu2RIEi9wDgNpMusJiZaLRWAnJ0m4C/0spIw3L/9xSV+yPcS4I57fZXJsW2acrVu+zNOAAf/lvuMF13+iPvzCuhwqNjvMsW33aswNHPoRkCutoRk79Lj0ZD5YPqwFxfoZc7YfCucK3CYsmcOP5lCXzE/gYHjHTplQNp/KAfK6NCzAPJ/iKOQuHtsYT524XjI4BV3OLcpiGsztimUalaJ5eJUsdwxz+chcCa9N8iYD7swa4QeJRDXF7cyNYhhxQTdHYhO1EmeLLH0nvPuSJl+BBbcyHluIWOJSQGWZmxDiPOd2OMYujOLkSUwdYS4JgtgjTrUn8jVe8LBOuL8ewSrjCGZsv425MxlBy45hVzOf2gCyuzXNRaGzOfzF/Q1MY7UO7sGAVkstw9wWpqQf97DFWby5OdP+h7jSd4vfWPI1+jwP3mKwOC4/TpmTl+vyliHCnO2+cf9vCswV/Wgw9wxto641dpx8agN8T7AjCp1NtNPrhn9f5ijOmCdUq9tlmBsA1U+lF7FAyHdWkhUf5pxHRjrIR4JCtxUZ1twdMgVztsc1tgxzvxjmLvC/pT6OFLx8KgOtG3sm5Uhx+F1egPVewqufw+X1DSoMc5DkqAcu8/godbG3FHPWBBfkc/edTcsV0eVMjJI5O7lyvE8pc9sjzPVg1TX+5OdTaegM58ZxOVL4i0fWJZgEYC8h1PTq9ohhDrdHT5mWUcwwZ13zJjyes3stO4uemr+tmLP9pEm8jLn5DRZYdyfvqhjzhpvVRKhTQnnB+xbghYjqkwhbOyvf+Ay81AdmO3MtYJnDfQo5KeRzsa/J5q4YNeZsFDQmJcPcusbcKAQr7HbfkC/Kp9aAPI2yJYwUBNyIUn8b2E/kjqwRWE7aP2CYOzSsZRtY5vBKyWFuDIPiildmjnZAmEvgsgYLYubOAf4vvte9/n+qMOW0RgQX3P1gDo6WK1iOBsRpSMGbCWiveUMz1wMP5aq+P5plbpd3Jmw+5hC37E4HeCQ1tQNgLtmdyARivFkhc0PwrpPbN8oNxPnUasrdNEq4I/DH38g2PaGqtsJPiRDuXsJ4bgxz/cK5XqtyxzKH30LQCAtIHw/Fa/LZFwHMxbP0xg2oRcytYarKNc8WSPKpJbRGBGAl47Qcz4LGqXxhzDwhw5w1IAFi4h7OSiISwxxM2qgxQOFV55YaIqeG8SHMna30GnLIIMwNqeaC7cHj0XwfpPlUAq1i8wwvW3g3LKhKwnz7rMo7Nfxxljnr2SXP4cfRZdZuIghz0ED/Bd5/I3Bf4NtAhuuIOxszC37JnDUmdCSn2iVc5tAV/nK/la5+k+VTCbTWp99qVke0eBBcir41ywYbzGUrfvkkfhDv2qxmoaF8ngcvKzcUDFDwfBxMBeg+rHZQMVfG1X5SvS8uc8StDr9lyRbyfCoMIp25wx5FFl7EEBJMkTGscZkb2vhVkzkrvTjVKAyddzl320K3jL2E+NanRjdAQC08TuLA0i5FnblC9kZOaSL4zMFw/F7upS2fWg05PQDjXEZeZ/7iUeCZ5D+ak5LDXBYq7KKgfB5/Ka3v7Tc9av/ETgLwSiKycBHXih7HFHPWwIGxtix6zDB3qVs47zumrDWfKnuvXfCF7VIl7cKk8/hOxaJ4u+ziImAuw+vFiQvy4qNkueMwly08tKsHgUnlf4KASQeWNHPWNCACAxk2kjmXrZndD3lSyKfqTcvB7rzaggIeG194Ht8K56kpmoqYy57pfCisZiLxrIi19AMMj7yIxK6NkS2E12F1U5yR8KkAhWHO2iAqOkhdirmLT94poa5zMKeQT9WbCoe0XN3jAVWQm7WsDvewA5YiMXMZFhfiaAZicwHM+etRjs/BxYNX4deysZCWqz8/vHgqI8MyZ6XHIjrIW5rzmEPHM1kQvY7UNfancsBTWTtjGsHrqn00wh4Lzwkqng7/yeYUFjLmsl9f4RV5wkB3S4fI1rjHZuIhQ0HFLCl8VJ/KRSRefTLeE0Eszx1wmYvmRfyJ/G7UKeRTheJUJzwREfCpwhGYaWYt5/AmQ+gk67FDGkjInNW/iSRiApa5rEkfAraCbOJN3E6n6/VKdbbeapO50sX07Q2xDQxzbvavHqixPupCnUo+VWtEUPhDqA74qLmSkWTBF3HwGMPXxhx5uISfqbZ4zFlnsI7EeyrjpWZn68IzjzmrR8Q4b8Sdc1hxHhLq7A7U2e3qidbjo8ayBC6rkryUqR1urqDJ3Jj2T8cgOAo3IXGY27r1j2QGKa7uy2XOmkVgXeKXRMQcSUHa/u3uoEsln6r1yLah7IaMBvZZo4uXn6OYG29mu9UN0XfDU9UX1nNxmLPwW05+QQdkEgXyyr7wmbMWJLwHi8tlrqTudCd1KvlUhL4hZbNISV7DYwG+GLUkpX49tVMazgoUc4dlHPqI2Z6JW/CFNZdj0ZxL4DZgo0WdrUa0gLmyilLCnPXSjTqFfKreiAAy+d5uMsCYTOAfvd4Q9Nd6bRlkeBKy+M3JBKzlYBZBjbnnsPYDwYYSrppgCiFzzPDcBsEGluRkPSE4n/M/887Ca3MK2yxiziryARLmrK8u1KnkUzl6YXdAGMtNDICyUFs8SOYpLl4PybL61VJGMQdaC51E3DdDLwrAXFJjjrijOP4YE2WYI8KQ4svCAAiZKwVoCXPWW4e1TiGfqjcigBWfu/kV5hQKC9O8gVFVuxZ0p5qjSzFHzGndDwZDJKsRhTm3K3/+hNQorIywJDfi/xx92LywJLYZmONHH2XdtZA5aw1FG76tTF2vODZWAq0RAaz4gto/UDPLxYNUW+6qC/rEXpbWm2ZuBIWyYVGotziQKhZJcQ4oWZfNIsPovENEcFzmWmIKQ4m/Y2VIVTzLmLMmyzbmrAuhDiluKkgVQrk81NcHULm4ZcLFm7IDGHhQ4exTdnUGBrEMUkYUc2S/iI2CZD0c7m4RLEae7GACUhVNdMtCaHNwi2/4R8EqP4Zoikh4hDnBLs4pyHAS5irq1GbdWiGfqjUigNpY4Sze4VcFi8cr2MqAFtIvkPws5izDnEXEQhslYZiQhcCTLtO8dR4t8TODdyPU/eBZSFfkzFkbHB1wNJTakxHFVMlgjpQiAo1VQ1uicYlmMbEB+Z65PgwqNlFOsqzFxyxz1oq1IsiRF3k04zU/8MHogS7Oq2gGkO8EmFYdETJnpXl0wOqW9CUFdSpuiko+VWtEAFF/feXiXpAfGw2bP5oHSMNuaEQsaoO5bOWuV9T4wa2lVoDavYT8JHaPExirULYgDuJJgQxIqYQ5cdHkeBW3MGftlambKKxy6NpP+6kQ/Qzb7VgxUJ87cRxHLlvAVcM2inMsR5MPx3Ejh/N1Ti9ufoUDJnD0gS+vl+Ckz09u4CVJEnpBvGqt8fiIw9CL4yCKgtC+rr7OpT044b4sJWnPI77i44w7EmX4kJW77qqtyqtldrG7ZK+4oOz1RIGTtHgWfYUZZzuja+zFPGAlIUn83HwlahNz3MeQ8bwll/TFl8Jv0nqLjEGfz3pf6/Vu8KngqOUjj9yMaYZ82P48fWFHaAyWBXOiposGW2bCLmwnLvMlhGdJkUmZS+fIHMOnglc9BSELlYjATdX0MXMMnxL0jG+VfCqOCFRS5qINcAb6oZJPJRGBSpmKxAUz0AuF/amFmLNVudYx3yLye6CSTy2VCqXwga/uGWjGnH/eL42oVBevKgUP5hi+34GVgnsSVsnnlsiAUKf9GD6DBqTVFQSorl+oRAbiAisDbVDJp1Ja71zhcCLzLSI/D5V8KlOTquTRmG8R+WGkCsSxJQxjFZHTfIvID0Mln9pIfqps1EK2xuo+gwZU8qkcR1ElmWfkyx+FCgVxU9VeqBAedN/EZ9CGzoLIWiErZOTLn0M/Uamw5NVT9FVyBuJKDINv4ktl5vDLIQcKPqnWg0sNaliohNRLQbJNJYDXehCAQQWlfKrIQ1SSL3UevmFQQiWfKvlux0uXSNBAA6TbRQtIlJC5ivri6NxAYgB4uSefyoN0vymB+aoz/VDZnyo/kbU6VUbWQvdzbQ34UMqnyrNsM5XMXtjp+0kMhFDLp7a4hndm0w10QMnSiY8WAWxUIgPugf8GXTFUkUDaD4lSqr7U+X0U/zyU9qcqbAnfhirCp84Tn/91aIuilXKsOk9Z/8ehlE+NlJQrlepLI19qg8bX3TGpbtAJA6UNIIqNGfny9yFVyqequhWpSmQQGflSB76RT+VBRb401Zc6oLR5UbaXnYVSUG+qL7+PfdQ45o9GHMfuPZLVbNnSYN5mZKovv4vtsMeg+GBQnv53ntwlE0/YFllkLQ/MPgMDAwMDAwMDAwODPwL/Ad3p5uKuFGCHAAAAAElFTkSuQmCC" alt="">
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#" >
+                    <i class="uil uil-estate active"></i>
+                    <span class="link-name active">Dahsboard</span>
+                </a></li>
+                <li class="dropdown">
+                    <a href="#">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">Content</span>
+                        <i class="uil uil-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/users.html">Users</a></li>
+                        <li><a href="/policy.html">Policy</a></li>
+                        <li><a href="#">Item 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Analytics</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">Like</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Comment</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-share"></i>
+                    <span class="link-name">Share</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <!-- <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div> -->
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Demo Card</span>
+                        <span class="number">1234</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-comments"></i>
+                        <span class="text">Demo Card</span>
+                        <span class="number">1234</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-share"></i>
+                        <span class="text">Demo Card</span>
+                        <span class="number">1234</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Recent Activity</span>
+                </div>
+
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Name</span>
+                        <span class="data-list">Prem Shahi</span>
+                        <span class="data-list">Deepa Chand</span>
+                        
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Email</span>
+                        <span class="data-list">premshahi@gmail.com</span>
+                        <span class="data-list">deepachand@gmail.com</span>
+                        
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Joined</span>
+                        <span class="data-list">2022-02-12</span>
+                        <span class="data-list">2022-02-12</span>
+                        
+                    </div>
+                    <div class="data type">
+                        <span class="data-title">Type</span>
+                        <span class="data-list">New</span>
+                        <span class="data-list">Member</span>
+                       
+                    </div>
+                    <div class="data status">
+                        <span class="data-title">Status</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
