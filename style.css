@@ -71,7 +71,7 @@ nav{
     height: 100%;
     width: 250px;
     padding: 10px 14px;
-    background-color: var(--panel-color);
+    background-color: black;
     border-right: 1px solid var(--border-color);
     transition: var(--tran-05);
 }
@@ -128,7 +128,7 @@ nav .menu-items{
     height: 5px;
     width: 5px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: #54c02c;
 }
 .nav-links, .logout-mode{
     padding-left:2px !important;
@@ -148,7 +148,7 @@ body.dark li a:hover:before{
 .menu-items li a .link-name{
     font-size: 18px;
     font-weight: 400;
-    color: var(--black-light-color);    
+    color: white;    
     transition: var(--tran-05);
 }
 nav.close li a .link-name{
@@ -160,7 +160,7 @@ nav.close .logo-image img{
 }
 .nav-links li a:hover i,
 .nav-links li a:hover .link-name{
-    color: var(--primary-color);
+    color: #54c02c;
 }
 body.dark .nav-links li a:hover i,
 body.dark .nav-links li a:hover .link-name{
@@ -231,7 +231,7 @@ nav.close ~ .dashboard{
     justify-content: space-between;
     align-items: center;
     padding: 10px 14px;
-    background-color: var(--panel-color);
+    background-color: black;
     transition: var(--tran-05);
     z-index: 10;
     border-bottom: 0.5px solid #CCC;
@@ -242,7 +242,7 @@ nav.close ~ .dashboard .top{
 }
 .dashboard .top .sidebar-toggle{
     font-size: 26px;
-    color: var(--text-color);
+    color: white;
     cursor: pointer;
 }
 .dashboard .top .search-box{
@@ -468,7 +468,8 @@ nav.close ~ .dashboard .top{
     display: none;
     position: relative;
     left:55px;
-    /* background-color: #f9f9f9; */
+    background-color: black;
+    color: white;
     min-width: 160px;
     border: none;
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
@@ -478,7 +479,7 @@ nav.close ~ .dashboard .top{
     display: block;
 }
 .dropdown .dropdown-menu li a {
-    color: #4D4C4C !important;
+    color: white !important;
 }
 
 .dropdown.active .dropdown-menu {
@@ -497,7 +498,7 @@ nav.close ~ .dashboard .top{
 }
 
 .active{
-    color:blue !important
+    color:#54c02c !important
 }
 .mainOverViewUsers{
     display: flex;
@@ -554,4 +555,5 @@ nav.close ~ .dashboard .top{
 #createPolicyModal .modal-footer {
     justify-content: center; /* Center align the buttons */
 }
+
 

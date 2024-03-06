@@ -1,35 +1,44 @@
 const body = document.querySelector("body"),
-      modeToggle = body.querySelector(".mode-toggle");
-      sidebar = body.querySelector("nav");
-      sidebarToggle = body.querySelector(".sidebar-toggle");
+      modeToggle = body.querySelector(".mode-toggle"),
+      sidebar = body.querySelector("nav"),
+      sidebarToggle = body.querySelector(".sidebar-toggle"),
+      logoImage = body.querySelector(".logo-image img");
 
 let getMode = localStorage.getItem("mode");
-if(getMode && getMode ==="dark"){
+if (getMode && getMode === "dark") {
     body.classList.toggle("dark");
 }
 
 let getStatus = localStorage.getItem("status");
-if(getStatus && getStatus ==="close"){
+if (getStatus && getStatus === "close") {
     sidebar.classList.toggle("close");
+    // Change the logo image when the sidebar is closed
+    logoImage.src = "https://www.supremesecurities.com/content/images/logo-icon.png"; // Change this to the URL of your closed image
+} else {
+    // Change the logo image when the sidebar is open
+    logoImage.src = "https://www.supremesecurities.com/content/images/logo.png"; // Change this to the URL of your open image
 }
 
-modeToggle.addEventListener("click", () =>{
+modeToggle.addEventListener("click", () => {
     body.classList.toggle("dark");
-    if(body.classList.contains("dark")){
+    if (body.classList.contains("dark")) {
         localStorage.setItem("mode", "dark");
-    }else{
+    } else {
         localStorage.setItem("mode", "light");
     }
 });
 
 sidebarToggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
-    if(sidebar.classList.contains("close")){
+    // Change the logo image based on the sidebar's open/close status
+    if (sidebar.classList.contains("close")) {
         localStorage.setItem("status", "close");
-    }else{
+        logoImage.src = "https://www.supremesecurities.com/content/images/logo-icon.png"; // Change this to the URL of your closed image
+    } else {
         localStorage.setItem("status", "open");
+        logoImage.src = "https://www.supremesecurities.com/content/images/logo.png"; // Change this to the URL of your open image
     }
-})
+});
 
 
     // JavaScript for dropdown functionality
