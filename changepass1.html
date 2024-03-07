@@ -30,8 +30,8 @@
                 </a></li>
                 <li class="dropdown">
                     <a href="#">
-                        <i class="uil uil-files-landscapes active"></i>
-                        <span class="link-name active">Content</span>
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">Content</span>
                         <i class="uil uil-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
@@ -41,8 +41,8 @@
                     </ul>
                 </li>
                 <li><a href="/changepass1.html">
-                    <i class="uil uil-chart"></i>
-                    <span class="link-name">Change Password</span>
+                    <i class="uil uil-chart active"></i>
+                    <span class="link-name active">Change Password</span>
                 </a></li>
                 <li><a href="/profile.html">
                     <i class="uil uil-thumbs-up"></i>
@@ -93,95 +93,106 @@
         <div class="dash-content">
             <div class="mainOverViewUsers">
                 <div class="title">
-                    <i class="uil uil-users-alt"></i>
-                    <span class="text">Users</span>
+                    <i class="uil uil-lock-alt"></i>
+                    <span class="text">Change Password</span>
                 </div>
-                <div>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createUserModal">
-                        Create new user +
-                    </button>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="createUserModal" tabindex="-1" role="dialog" aria-labelledby="createUserModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="createUserModalLabel">Create User</h5>
-                            </div>
-                            <div class="modal-body">
-                                <form class="flex flex-col gap-y-4">
-                                    <div class="form-group">
-                                        <label for="fullName">Full Name</label>
-                                        <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="role">Role</label>
-                                        <select class="form-control" id="role">
-                                            <option value="" selected disabled>Select Role</option>
-                                            <option value="Super Admin">Super Admin</option>
-                                            <option value="Branch Admin">Branch Admin</option>
-                                            <option value="Agent">Agent</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email Id</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="mobile">Mobile No</label>
-                                        <input type="text" class="form-control" id="mobile" placeholder="Enter mobile number">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="address">Address</label>
-                                        <textarea class="form-control" id="address" rows="3" placeholder="Enter address"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="loginName">Login Name</label>
-                                        <input type="text" class="form-control" id="loginName" placeholder="Enter login name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Enter password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="confirmPassword">Confirm Password</label>
-                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                <!-- <div>
+                    
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createPolicyModal">
+                            Create Policy +
+                        </button>
+                   
+                </div>  -->
+                    <!-- Modal -->
+                    <!-- <div class="modal fade" id="createPolicyModal" tabindex="-1" role="dialog" aria-labelledby="createPolicyModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="createPolicyModalLabel">Create Policy</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="flex flex-col gap-y-4">
+                                        <div class="form-group">
+                                            <label for="profileName">Profile Name *</label>
+                                            <input type="text" class="form-control" id="profileName" placeholder="Enter profile name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="type">Type *</label>
+                                            <select class="form-control" id="type">
+                                                <option value="" selected disabled>Select Type</option>
+                                                <option value="Application">Application</option>
+                                                <option value="OS">OS</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="minUppercase">Minimum Uppercase Characters *</label>
+                                            <input type="number" class="form-control" id="minUppercase" placeholder="Enter minimum uppercase characters">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="minLowercase">Minimum Lowercase Characters *</label>
+                                            <input type="number" class="form-control" id="minLowercase" placeholder="Enter minimum lowercase characters">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="minNumeric">Minimum Numeric Characters *</label>
+                                            <input type="number" class="form-control" id="minNumeric" placeholder="Enter minimum numeric characters">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="minSpecial">Minimum Special Characters *</label>
+                                            <input type="number" class="form-control" id="minSpecial" placeholder="Enter minimum special characters">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="minPasswordLength">Minimum Password Length *</label>
+                                            <input type="number" class="form-control" id="minPasswordLength" placeholder="Enter minimum password length">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="maxPasswordLength">Maximum Password Length *</label>
+                                            <input type="number" class="form-control" id="maxPasswordLength" placeholder="Enter maximum password length">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
                             </div>
                         </div>
+                    </div> -->
+                    <!-- Modal ends -->
+                    
+
+                
+
+                
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p>To enhance your security, please provide the requested details to update your password.</p>
+                    <div class="col-md-6 offset-md-3 mt-4">
+                        <!-- <h2>Change Password</h2> -->
+                        <!-- <p>To enhance your security, please provide the requested details to update your password.</p> -->
+                        <form id="changePasswordForm">
+                            <div class="mb-4">
+                                <label for="oldPassword" class="form-label">Old Password</label>
+                                <input type="password" class="form-control" id="oldPassword" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="newPassword" class="form-label">New Password</label>
+                                <input type="password" class="form-control" id="newPassword" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" required>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 text-center mt-3">
+                                    <button type="submit" class="btn btn-primary btn-block">Change Password</button>
+                                </div>
+                            </div>
+                            
+                            
+                        </form>
                     </div>
                 </div>
-                <!-- Modal ends -->
-
-                
-
-                
-            </div>
-
-            <div class="container">
-                <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Full Name</th>
-                            <th>Role</th>
-                            <th>Email</th>
-                            <th>Mobile</th>
-                            <th>Address</th>
-                            <th>Login Name</th>
-                            <th>Actions</th> <!-- New column for actions -->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Table rows will be dynamically populated with user data -->
-                    </tbody>
-                </table>
-            </div>
             </div>
             
 
